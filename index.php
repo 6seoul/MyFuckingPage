@@ -1,6 +1,7 @@
 <?php 
 $pdo = new PDO('mysql:host=mysql1.php.xdomain.ne.jp;dbname=glitter_fuck;charset=utf8', 'glitter_fucking', 'fucklolol');
 if ($_SERVER['REQUEST_METHOD']=='post') {
+    echo 'fuck';
     $stmt = $pdo->prepare('INSERT INTO commentfuck values(?, ?)');
     if ($stmt->execute([$_REQUEST['userfuck'], $_REQUEST['commentfuck']])) {
         header ('Location: ./index.php');
